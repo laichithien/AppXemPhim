@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EC7E52C-B78C-4285-AF1C-C726B5F28B7F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppXemPhim</RootNamespace>
+    <AssemblyName>AppXemPhim</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\Data_Provider.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\01_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\01_Home.Designer.cs">
+      <DependentUpon>01_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\03_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\03_History.Designer.cs">
+      <DependentUpon>03_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\04_PlayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\04_PlayList.Designer.cs">
+      <DependentUpon>04_PlayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\AddPlaylistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\AddPlaylistForm.Designer.cs">
+      <DependentUpon>AddPlaylistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\DetailFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\DetailFilm.Designer.cs">
+      <DependentUpon>DetailFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\02_Favorite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\02_Favorite.Designer.cs">
+      <DependentUpon>02_Favorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\NewPlayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\NewPlayList.Designer.cs">
+      <DependentUpon>NewPlayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList\PlayScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList\PlayScreen.Designer.cs">
+      <DependentUpon>PlayScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoviePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MoviePanel.Designer.cs">
+      <DependentUpon>MoviePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoviePanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MoviePanel2.Designer.cs">
+      <DependentUpon>MoviePanel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phim.cs" />
+    <Compile Include="PlayListPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayListPanel.Designer.cs">
+      <DependentUpon>PlayListPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayListPanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayListPanel2.Designer.cs">
+      <DependentUpon>PlayListPanel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Variables\listFormPanel.cs" />
+    <Compile Include="Video.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Video.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\01_Home.resx">
+      <DependentUpon>01_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\03_History.resx">
+      <DependentUpon>03_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\04_PlayList.resx">
+      <DependentUpon>04_PlayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\AddPlaylistForm.resx">
+      <DependentUpon>AddPlaylistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\DetailFilm.resx">
+      <DependentUpon>DetailFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\02_Favorite.resx">
+      <DependentUpon>02_Favorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\NewPlayList.resx">
+      <DependentUpon>NewPlayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList\PlayScreen.resx">
+      <DependentUpon>PlayScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoviePanel.resx">
+      <DependentUpon>MoviePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoviePanel2.resx">
+      <DependentUpon>MoviePanel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayListPanel.resx">
+      <DependentUpon>PlayListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayListPanel2.resx">
+      <DependentUpon>PlayListPanel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Video.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\logo\testthumbnail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\p001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\phim\MV26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV30.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV01.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV02.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV03.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV04.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV05.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV06.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV07.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV08.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV09.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV10.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV11.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV12.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV13.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV14.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV15.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV17.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV19.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\video\MV21.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
