@@ -66,7 +66,6 @@
             this.Name = "PlayListPanel2";
             this.Size = new System.Drawing.Size(446, 60);
             this.ResumeLayout(false);
-
         }
 
         #endregion

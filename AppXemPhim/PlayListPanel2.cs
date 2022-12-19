@@ -44,6 +44,5 @@ namespace AppXemPhim
             childForm.BringToFront();
             childForm.Show();
         }
-
     }
 }
